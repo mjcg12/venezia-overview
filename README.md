@@ -56,6 +56,37 @@ _(Diagramas UML - Visão macro do sistema)_
 ### Classes de Entidades
 ![Classes Entidades](images/06%20-%20Classes%20Entidades.png)
 
+## Capturas de Tela (Interface do Sistema)
+
+Abaixo estão algumas imagens ilustrando as principais funcionalidades e interfaces do software desenvolvido.
+
+### 1. Visualização de Torra
+![Visualização de Torra](images/07%20-%20Screenshot01%20-%20Visualiza%C3%A7%C3%A3o%20de%20Torra.png)
+
+### 2. Análise e Agrupamento (DBSCAN)
+![Análise DBSCAN](images/08%20-%20Screenshot02%20-%20An%C3%A1lise%20DBSCAN.png)
+
+### 3. Gráfico de Clusters (DBSCAN)
+![Gráfico DBSCAN Clusters](images/09%20-%20Screenshot03%20-%20Gr%C3%A1fico%20DBSCAN%20Clusters.png)
+
+### 4. Configurações do Torrador
+![Configurações Torrador](images/10%20-%20Screenshot04%20-%20Configura%C3%A7%C3%B5es%20Torrador.png)
+
+### 5. Treinamento da GAN (Rede Adversarial Generativa)
+![Treinamento da GAN](images/11%20-%20Screenshot05%20-%20Treinamento%20da%20GAN.png)
+
+### 6. Cadastro de Lote de Café
+![Cadastro de Lote](images/12%20-%20Screenshot06%20-%20Cadastro%20de%20Lote.png)
+
+### 7. Informações e Histórico da Torra
+![Informações da torra](images/13%20-%20Screenshot07%20-%20Informa%C3%A7%C3%B5es%20da%20torra.png)
+
+### 8. Avaliação Sensorial (Protocolo SCA)
+![Avaliação SCA](images/14%20-%20Screenshot08%20-%20Avalia%C3%A7%C3%A3o%20SCA.png)
+
+### 9. Perfil Sensorial (Gráfico Radar)
+![Perfil Sensorial](images/15%20-%20Screenshot09%20-%20Perfil%20Sensorial.png)
+
 ## Tecnologias
 
 C# (.NET 8), WPF, Modbus/TCP, DBSCAN, GAN
