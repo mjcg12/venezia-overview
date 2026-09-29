@@ -36,15 +36,15 @@ https://revistaes.com.br/resumo-executivo/machine-learning-na-torra-e-analise-se
 
 ## Arquitetura
 
-_(diagramas UML elaborados manualmente pelo autor)_
+_(Diagramas UML - Visão macro do sistema)_
 
 ### Casos de Uso
 ![Casos de Uso](images/01%20-%20Casos%20de%20Uso.png)
 
-### Diagrama de Classes
+### Diagrama de Classes (Visão Geral)
 ![Classes Geral](images/02%20-%20Classes%20Geral.png)
 
-### Visão Lógica
+### Diagrama de Classes (Visão Lógica)
 ![Classes Visão Lógica](images/03%20-%20Classes%20Vis%C3%A3o%20L%C3%B3gica.png)
 
 ### Classes de Fronteira
