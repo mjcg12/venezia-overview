@@ -38,11 +38,23 @@ https://revistaes.com.br/resumo-executivo/machine-learning-na-torra-e-analise-se
 
 _(diagramas UML elaborados manualmente pelo autor)_
 
-![Componentes](docs/uml/componentes.png)
+### Casos de Uso
+![Casos de Uso](images/01%20-%20Casos%20de%20Uso.png)
 
-## Capturas de tela
+### Diagrama de Classes
+![Classes Geral](images/02%20-%20Classes%20Geral.png)
 
-![Descrição](docs/images/screenshot-01.png)
+### Visão Lógica
+![Classes Visão Lógica](images/03%20-%20Classes%20Vis%C3%A3o%20L%C3%B3gica.png)
+
+### Classes de Fronteira
+![Classes Fronteira](images/04%20-%20Classes%20Fronteira.png)
+
+### Classes Controladoras
+![Classes Controladores](images/05%20-%20Classes%20Controladores.png)
+
+### Classes de Entidades
+![Classes Entidades](images/06%20-%20Classes%20Entidades.png)
 
 ## Tecnologias
 
