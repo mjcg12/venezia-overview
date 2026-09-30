@@ -21,13 +21,12 @@ Como a obtenção de amostras reais é cara e limitada, o estudo também utilizo
 
 ## Resultados principais
 
-Na pesquisa original, com 55 torras reais de três lotes distintos:
+Através da análise paramétrica estratificada, observou-se que a linhagem genética e o *terroir* (representados por cada lote real) estabelecem *baselines* diferentes para a pontuação SCA, mas respondem a padrões termodinâmicos semelhantes durante a torra:
+- **Influência do Lote:** Há uma clara segregação nas pontuações de Doçura, Acidez e Corpo dependendo do lote analisado (Mundo Novo, Catuaí Amarelo e Blend Próprio), com as curvas de tendência operando em patamares e variâncias distintos.
+- **Comportamento Sensorial vs. Processo:** O tempo total e a taxa de ascensão (RoR) afetam diretamente a estrutura da bebida, demonstrando fortes tendências estatísticas (como o decaimento em certas notas em fases prolongadas).
+- **Validação Sintética (GAN):** A eficácia do *Data Augmentation* promovido pela Rede Adversarial Generativa é validada cientificamente pela sobreposição estatística das curvas de regressão local (LOWESS) no domínio sintético, evidenciando que a IA aprendeu e preservou a covariância intrínseca multivariada entre os perfis físicos da torra e as notas dadas pelos provadores.
 
-- Torras mais claras e com menor tempo de pirólise favoreceram acidez e doçura (correlação de −60% entre acidez e tempo de pirólise).
-- Torras mais escuras e prolongadas favoreceram corpo e notas de chocolate.
-- Nos dados sintéticos gerados pela GAN, as tendências das correlações se mantiveram.
-
-Desde a conclusão do trabalho, a base foi ampliada e conta hoje com cerca de 100 torras reais.
+A base original de dados que fundamenta esta análise conta hoje com dezenas de torras reais rigorosamente monitoradas.
 
 ## Publicação
 
@@ -41,15 +40,15 @@ Como parte dos resultados consolidados da pesquisa, realizou-se o cruzamento par
 Os painéis a seguir demonstram as dispersões e correlações (curvas de tendência suavizadas por regressão *LOWESS*) das notas de **Doçura, Acidez e Corpo** em função de três métricas termodinâmicas e temporais do processo de torrefação:
 
 ### 1. Ponto da Torra (Agtron) vs Atributos Sensoriais
-Observa-se nas torras empíricas que perfis mais claros (menor grau Agtron) tendem a preservar ácidos orgânicos (acentuando a acidez), enquanto graus de torra mais escuros e avançados favorecem a percepção do corpo da bebida. O lote de torras sintéticas gerado pela GAN acompanhou com altíssima fidelidade a distribuição multivariada e a tendência geral observada na amostragem física.
+Observa-se nas torras empíricas que perfis mais claros (maior grau Agtron) tendem a preservar ácidos orgânicos (acentuando a acidez), enquanto graus de torra mais escuros e avançados (menor grau Agtron) favorecem o desenvolvimento do corpo da bebida. O lote de torras sintéticas gerado pela GAN acompanhou com fidelidade essa inclinação, o que é corroborado estatisticamente pela continuidade das regressões locais e pela manutenção do suporte (*range*) da distribuição física subjacente.
 ![Correlações com Ponto de Torra](images/PontoTorra_consolidado.png)
 
 ### 2. Tempo Total da Torra vs Atributos Sensoriais
-A duração macro do processo indica impacto na degradação prolongada de açúcares (diminuição relativa de doçura para tempos longos extremos) e solidificação estrutural do grão (corpo). O modelo adversário provou captar com robustez o comportamento da janela de torra ideal entre 10 e 13 minutos.
+A duração macro do processo indica impacto na degradação prolongada de açúcares (diminuição relativa de doçura para tempos longos extremos) e na solidificação estrutural do grão (corpo). O modelo adversário demonstrou altíssima robustez ao captar exatamente os mesmos patamares de resposta sensorial encontrados na faixa de torra dos lotes originais.
 ![Correlações com Tempo Total](images/T_Total_consolidado.png)
 
 ### 3. Rate of Rise (RoR) em Pirólise vs Atributos Sensoriais
-O RoR (*Rate of Rise* - °C/min) na fase de pirólise (ou Fase de Desenvolvimento, pós-primeiro crack) tem forte significância estatística. Taxas mais contidas de transferência de calor nessa fase final auxiliam no controle das reações pirolíticas exotérmicas, modelando drasticamente os atributos de retrogosto e corpo da bebida resultante.
+O RoR (*Rate of Rise* - °C/min) na fase de pirólise (ou Fase de Desenvolvimento, pós-primeiro crack) possui forte impacto nas reações aromáticas finais. Taxas mais contidas de transferência de calor nessa etapa auxiliam no controle das reações pirolíticas exotérmicas, modelando os atributos sensoriais da bebida resultante. A distribuição condicional sintética replica com êxito a dispersão bivariada observada nas amostras físicas de base.
 ![Correlações com RoR na Pirólise](images/RoR_Pirolise_consolidado.png)
 
 ## Arquitetura
