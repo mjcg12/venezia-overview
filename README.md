@@ -74,6 +74,22 @@ _(Diagramas UML - Visão macro do sistema)_
 ### Classes de Entidades
 ![Classes Entidades](images/06%20-%20Classes%20Entidades.png)
 
+### Diagrama de Implantação
+```mermaid
+flowchart LR
+    subgraph Fabrica ["🏭 Chão de Fábrica"]
+        Torrador["Torrador Carmomaq Stratto 1.0\n(CLP Interno / Modbus Server)"]
+    end
+
+    subgraph Controle ["💻 Estação de Controle"]
+        Venezia["Software Venezia\n(Aplicação Desktop .NET 8 / WPF)"]
+        BD[(Banco de Dados Local)]
+        Venezia <-->|Leitura e Gravação| BD
+    end
+
+    Torrador <==>|Rede Local Ethernet\nProtocolo Modbus/TCP| Venezia
+```
+
 ## Capturas de Tela (Interface do Sistema)
 
 Abaixo estão algumas imagens ilustrando as principais funcionalidades e interfaces do software desenvolvido.
