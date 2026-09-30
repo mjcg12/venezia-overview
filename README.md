@@ -34,6 +34,24 @@ Desde a conclusão do trabalho, a base foi ampliada e conta hoje com cerca de 10
 Esta pesquisa foi desenvolvida como Trabalho de Conclusão do MBA em Engenharia de Software da USP/Esalq (janeiro de 2026), com nota 10 em todas as etapas e indicação ao prêmio de melhor TCC. Seu resumo executivo foi publicado na Revista Estratégias e Soluções (Pecege):
 https://revistaes.com.br/resumo-executivo/machine-learning-na-torra-e-analise-sensorial-de-cafes-especiais
 
+## Análise de Dados e Correlações Sensoriais
+
+Como parte dos resultados consolidados da pesquisa, realizou-se o cruzamento paramétrico entre as variáveis físicas da torra e as respectivas avaliações sensoriais (segundo protocolo SCA). As distribuições foram divididas entre as **amostras reais** (lotes distintos de café) e as **amostras sintéticas**, geradas artificialmente pela Rede Adversarial Generativa (GAN) em processo de *Data Augmentation*. 
+
+Os painéis a seguir demonstram as dispersões e correlações (curvas de tendência suavizadas por regressão *LOWESS*) das notas de **Doçura, Acidez e Corpo** em função de três métricas termodinâmicas e temporais do processo de torrefação:
+
+### 1. Ponto da Torra (Agtron) vs Atributos Sensoriais
+Observa-se nas torras empíricas que perfis mais claros (menor grau Agtron) tendem a preservar ácidos orgânicos (acentuando a acidez), enquanto graus de torra mais escuros e avançados favorecem a percepção do corpo da bebida. O lote de torras sintéticas gerado pela GAN acompanhou com altíssima fidelidade a distribuição multivariada e a tendência geral observada na amostragem física.
+![Correlações com Ponto de Torra](images/PontoTorra_consolidado.png)
+
+### 2. Tempo Total da Torra vs Atributos Sensoriais
+A duração macro do processo indica impacto na degradação prolongada de açúcares (diminuição relativa de doçura para tempos longos extremos) e solidificação estrutural do grão (corpo). O modelo adversário provou captar com robustez o comportamento da janela de torra ideal entre 10 e 13 minutos.
+![Correlações com Tempo Total](images/T_Total_consolidado.png)
+
+### 3. Rate of Rise (RoR) em Pirólise vs Atributos Sensoriais
+O RoR (*Rate of Rise* - °C/min) na fase de pirólise (ou Fase de Desenvolvimento, pós-primeiro crack) tem forte significância estatística. Taxas mais contidas de transferência de calor nessa fase final auxiliam no controle das reações pirolíticas exotérmicas, modelando drasticamente os atributos de retrogosto e corpo da bebida resultante.
+![Correlações com RoR na Pirólise](images/RoR_Pirolise_consolidado.png)
+
 ## Arquitetura
 
 _(Diagramas UML - Visão macro do sistema)_
